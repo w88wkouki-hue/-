@@ -1,0 +1,53 @@
+body {
+    background: #020617;
+    color: #f8fafc;
+    font-family: sans-serif;
+    padding: 12px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.game-body {
+    padding: 12px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.body-normal { background: #0f172a; color: #f8fafc; }
+.body-rev { background: #4c0519; color: #fff1f2; border: 2px solid #f43f5e; }
+
+.score-board { padding: 8px; border-radius: 8px; font-size: 12px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-bottom: 12px; text-align: center; border: 1px solid #334155; background: rgba(0, 0, 0, 0.2); }
+.row-container { display: flex; align-items: center; padding: 6px; margin-bottom: 6px; border-radius: 6px; min-height: 55px; background: rgba(255, 255, 255, 0.05); }
+.row-label { width: 45px; font-size: 12px; font-weight: bold; color: #94a3b8; }
+.cards { display: flex; gap: 5px; flex-wrap: wrap; flex-grow: 1; }
+
+.card { width: 36px; height: 54px; background: white; color: black; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 2px; font-weight: bold; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.3); box-sizing: border-box; position: relative; }
+.card.my-card { width: 48px; height: 68px; font-size: 15px; background: #fef9c3; border: 2px solid #eab308; cursor: pointer; }
+.card.selected-card { border: 3px solid #ff007f !important; background: #fce7f3 !important; transform: scale(1.05); }
+
+.badge { font-size: 8px; padding: 1px 2px; border-radius: 2px; color: white; font-weight: normal; margin-top: 1px; width: 100%; text-align: center; box-sizing: border-box; }
+.badge-acc { background: #22c55e; font-size: 7px; } 
+.badge-brk { background: #ef4444; font-size: 7px; } 
+.badge-rec { background: #ec4899; } 
+
+.confirm-panel { background: #3b82f6; color: white; padding: 10px; border-radius: 6px; text-align: center; margin-bottom: 12px; font-size: 14px; font-weight: bold; }
+.confirm-btn { background: #22c55e; color: white; border: none; padding: 6px 14px; margin-left: 10px; font-weight: bold; border-radius: 4px; cursor: pointer; font-size: 13px; }
+.row-choose-btn { background: #f59e0b; color: white; border: none; padding: 5px 10px; font-weight: bold; border-radius: 4px; cursor: pointer; font-size: 11px; margin-left: auto;}
+.log-box { background: #000; padding: 8px; border-radius: 6px; min-height: 60px; font-size: 13px; color: #38bdf8; margin-top: 12px; line-height: 1.4; border: 1px solid #334155; max-height: 200px; overflow-y: auto; }
+
+.setup-panel { background: #1e293b; padding: 20px; border-radius: 12px; text-align: center; width: 100%; max-width: 500px; box-sizing: border-box; border: 1px solid #475569; }
+.mode-tab-container { display: flex; background: #0f172a; border-radius: 8px; padding: 4px; margin-bottom: 15px; border: 1px solid #334155; }
+.mode-tab { flex: 1; padding: 10px; font-weight: bold; font-size: 14px; cursor: pointer; border-radius: 6px; color: #94a3b8; text-align: center; transition: 0.2s; }
+.mode-tab.active { background: #3b82f6; color: white; }
+.mode-tab.active.special-active { background: #eab308; color: black; }
+.setup-select { padding: 8px 16px; font-size: 16px; border-radius: 6px; background: #0f172a; color: white; border: 1px solid #475569; margin: 10px 0; width: 100%; box-sizing: border-box;}
+.setup-btn { width: 100%; padding: 14px; background: #22c55e; color: white; font-weight: bold; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; margin-top: 15px; }
+.next-round-btn { background: #a855f7; color: white; border: none; padding: 8px 16px; font-weight: bold; border-radius: 6px; cursor: pointer; font-size: 14px; width: 100%; text-align: center; }
+
+.rule-toggle-btn { background: #475569; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; margin-bottom: 10px; font-weight: bold;}
+.rule-details { display: none; text-align: left; background: #0f172a; padding: 12px; border-radius: 6px; font-size: 12px; color: #cbd5e1; border: 1px solid #334155; margin-bottom: 15px; line-height: 1.5; }
